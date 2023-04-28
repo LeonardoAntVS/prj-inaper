@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href="../css/Login.css">
+
+</head>
+<body>
+<div id="container-form-imagem-login">
+  <img src="../img/InaperLogo.png" id="logo-inaper">
+<form id="formLogin">
+  <div id="container-titulo-login">
+  <p class="TituloLogin"><b>Bem vindo ao <br> <span>INAPER</span></b></p>
+  </div>
+  <div class="container-label-input-login">
+    <label for="input-email" class="label-login" id="label-email">E-mail</label>
+    <input type="email" class="InputsLogin" id="input-email" placeholder="E-mail" onchange="validateFields()"/>
+  </div>
+  <div class="container-label-input-login">
+    <label for="input-password" class="label-login" id="label-senha">Senha</label>
+    <input type="password" class="InputsLogin" id="input-password" placeholder="Senha" onchange="validateFields()"/>
+  </div>
+  <button class="BotaoRecSenha" disabled="true" id="recover-password-button">Recuperar senha</button>
+  <button class="BotaoLogin" disabled="true" id="login-button">Ir</button>
+</form>
+
+</div>
+<script src="../js/validate_login.jx"></script>
+</body>
+</html>

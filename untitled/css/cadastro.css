@@ -1,0 +1,54 @@
+body {
+    background-image: url("img/Background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;   
+}
+.TituloCadastro{
+    font-size: 200%;
+    font-family: Arial;
+}
+.TelaCadastro{
+    color: #0c3338;
+    font-family: Haettenschweiler;
+    font-size: large;
+    background-color: #acdb3a;
+    position: absolute;
+    left: 67%;
+    top: 7%;
+    padding: 40px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+}
+.LogoCadastro{
+    left: auto;
+    right: auto;
+}
+.LinkCadastro:hover{
+    color: #0061fe;
+    cursor: pointer;
+}
+.BotaoCadastro{
+    background-color: #0c3338;
+    color: white;
+    border-color: #1d6a74;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #592b1f;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+.BotaoCadastro:hover{
+    box-shadow: inset 400px 0 0 0 #592b1f;
+    border-color: #954734;
+}
+.ImputesCadastro{
+    border-radius: 10px;
+    height: 25px;
+}

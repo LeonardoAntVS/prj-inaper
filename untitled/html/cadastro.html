@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>#cadastro</title>
+</head>
+<body>
+<form id="formulario">
+  <label for="ncadastro">Cadastro de pessoas</label><br> <!-- ncadastro is "nome do cadastrado-->
+  <span>Nome: </span><input type="text" id="ncadastro" name="ncadastro"><br>
+  <input type="image" id="img_acolhido" name="img"><br>
+  <input type="date" id="data_cadastro" name="data"><br>
+  <input type="time" id="hora_cadastro" name="hora"><br>
+  <input type="checkbox" id="check_cafe">
+  <span>
+    Café da manhã
+  </span><br>
+  <input type="submit" value="criar">
+</form>
+<hr>
+<div id="div1"><hr/></div>
+<script>
+  const formularioDeDados = document.getElementById('formulario');
+  function obterDadosDaTela(){
+    const ncadastro = document.getElementById('ncadastro').value;
+    const data_cadastro = document.getElementById('data_cadastro').value;
+    const hora_cadastro = document.getElementById('hora_cadastro').value;
+    const check_cafe = document.getElementById('check_cafe').value;
+    return {
+      ncadastro,
+      data_cadastro,
+      hora_cadastro,
+      check_cafe
+    }
+  }
+  formularioDeDados.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log(obterDadosDaTela());
+  })
+
+  document.body.onload = adcElemento;
+
+  function adcElemento () {
+    // cria um novo elemento div
+    // e dá à ele conteúdo
+    var divNova = document.createElement("div");
+    var conteudoNovo01 = document.createTextNode("Hello Word");
+    divNova.appendChild(conteudoNovo01)
+
+    // adiciona o novo elemento criado e seu conteúdo ao DOM
+    var divAtual = document.getElementById("div1");
+    document.body.insertBefore(divNova, divAtual);
+  }
+</script>
+</body>
+</html>

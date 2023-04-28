@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>#atividades</title>
+</head>
+<body>
+<form>
+  <label for="natvd">Nome da Atividade</label><br> <!-- natvd is "nome da atividade-->
+  <input type="text" id="natvd" name="natvd"><br>
+  <input type="submit" value="criar">
+</form>
+<br/>
+<h1 id="h1"><hr/></h1>
+<div id="div1"><hr/></div>
+<script>
+  document.body.onload = adcElemento;
+
+  function adcElemento () {
+    // cria um novo elemento div
+    // e dá à ele conteúdo
+    var h1Nova = document.createElement("h1");
+    var divNova = document.createElement("div");
+    var conteudoNovo01 = document.createTextNode();
+    var conteudoNovo02 = document.createTextNode("Nome | Pontuação | Dia | [  ]");
+    h1Nova.appendChild(conteudoNovo01)
+    divNova.appendChild(conteudoNovo02); //adiciona o nó de texto à nova div criada
+
+    // adiciona o novo elemento criado e seu conteúdo ao DOM
+    var h1Atual = document.getElementById("h1");
+    var divAtual = document.getElementById("div1");
+    document.body.insertBefore(h1Nova, h1Atual);
+    document.body.insertBefore(divNova, divAtual);
+  }
+</script>
+</body>
+</html>
